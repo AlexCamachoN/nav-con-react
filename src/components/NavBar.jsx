@@ -1,9 +1,10 @@
 import React from 'react'
 import logo from '../logoblanco.png';
+import {CartWidget}  from './CartWidget';
 
 
 
-function NavBar() {
+export function NavBar() {
     return ( 
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -28,12 +29,13 @@ function NavBar() {
                             <li className="nav-item">
                                 <a className="nav-link ">Novedades</a>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link ">🛒🛒🛒
                                 
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
+                        <CartWidget numOfItems={4}/>
                     </div>
                 </div>
             </nav>

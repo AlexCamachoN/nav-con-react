@@ -1,17 +1,14 @@
 
 import './App.css';
-
-import NavBar from './components/NavBar'
-import Inicio from './components/Inicio'
-import Obras from './components/Obras';
+import {NavBar, ItemListContainer} from './components'
+import { Fragment } from 'react';
 
 function App() {
     return ( 
-    <div className = "App" > 
+    <> 
         <NavBar/>
-        <Inicio/>
-        <Obras/>
-    </div>
+        <ItemListContainer/>   
+    </>
     );
 }
 
