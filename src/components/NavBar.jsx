@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../logoblanco.png';
 import {CartWidget}  from './CartWidget';
+import {Link} from 'react-router-dom'
 
 
 
@@ -35,8 +36,9 @@ export function NavBar() {
                                 </a>
                             </li> */}
                         </ul>
-                        <CartWidget numOfItems={4}/>
+                        
                     </div>
+                    <CartWidget numOfItems={4}/>
                 </div>
             </nav>
         </div>
