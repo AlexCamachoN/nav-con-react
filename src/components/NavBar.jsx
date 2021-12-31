@@ -1,13 +1,12 @@
 import React from 'react'
 import logo from '../logoblanco.png';
 import {CartWidget}  from './CartWidget';
-import {Link} from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom';
 
 
 export function NavBar() {
     return ( 
-        <div>
+        <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
@@ -18,30 +17,36 @@ export function NavBar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mx-auto">
-                            <li className="nav-item">
-                                <a className="nav-link " aria-current="page" href="#">Inicio</a>
+                        <li>
+                              <NavLink 
+                              className="mx-2"
+                              to="/Home">
+                                  Home
+                              </NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Obras</a>
+                            <li>
+                              <NavLink 
+                              className="mx-2"
+                              to="/Obras">
+                                  obras
+                              </NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Reconocimientos</a>
+
+                            <li>
+                              <NavLink 
+                              className={({isActive}) => (isActive ? "active" : "")}
+                              to="/Reconocimiento">
+                                  Reconocimiento
+                              </NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link ">Novedades</a>
-                            </li>
-                            {/* <li className="nav-item">
-                                <a className="nav-link ">🛒🛒🛒
-                                
-                                </a>
-                            </li> */}
                         </ul>
                         
                     </div>
+                            
                     <CartWidget numOfItems={4}/>
                 </div>
             </nav>
-        </div>
+        </>
     );
 }
 

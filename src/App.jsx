@@ -1,21 +1,29 @@
 
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {NavBar, ItemListContainer} from './components'
 import { Fragment } from 'react';
-import { SimpleList } from './components/SimpleList';
-import { Counter } from './components/Counter';
 import { ItemCount} from './components/ItemCount';
+import {Home} from './pages/Home'
+import { Obras} from './pages/Obras';
+import { Reconocimiento} from './pages/Reconocimiento'; 
+import {Corrusel} from './components/carrusel/Corrusel';
 
-const listItems = ['juguetes', 'pavo']
-function App() {
+export function App() {
     return ( 
-    <> 
-        <NavBar/>
-        <ItemListContainer/>   
-        <SimpleList listItems={['juguetes', 'pavo']}/>
-        <Counter/> 
+    <Fragment> 
+        <BrowserRouter>
+            <NavBar/>
+            <Routes>
+                <Route path='/Home' element={<Home/>} />
+                <Route path='/Obras' element={<Obras/>} />
+                <Route path='/Reconocimiento' element={<Reconocimiento/>} />
+            </Routes>
+        </BrowserRouter>
+        <Corrusel/>
+        <ItemListContainer/>    
         <ItemCount/>
-    </>
+    </Fragment>
     );
 }
 
