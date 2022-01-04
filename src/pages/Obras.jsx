@@ -1,14 +1,14 @@
-import react from 'react'
+import React from 'react'
 
 export function Obras(){
     return (
-        <>
-        <div className="bg-light">
-            <div>
-                hola
+        
+            <div className="bg-light">
+                <div>
+                    holalll
+                </div>
             </div>
-        </div>
-        </>
+        
     ) 
 }
 

@@ -1,13 +1,15 @@
 
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {NavBar, ItemListContainer} from './components'
+import {NavBar, ItemListContainer,} from './components'
 import { Fragment } from 'react';
 import { ItemCount} from './components/ItemCount';
 import {Home} from './pages/Home'
 import { Obras} from './pages/Obras';
 import { Reconocimiento} from './pages/Reconocimiento'; 
-import {Corrusel} from './components/carrusel/Corrusel';
+
+
+
 
 export function App() {
     return ( 
@@ -20,7 +22,7 @@ export function App() {
                 <Route path='/Reconocimiento' element={<Reconocimiento/>} />
             </Routes>
         </BrowserRouter>
-        <Corrusel/>
+        
         <ItemListContainer/>    
         <ItemCount/>
     </Fragment>
